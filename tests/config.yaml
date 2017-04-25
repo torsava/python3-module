@@ -1,0 +1,23 @@
+document: modularity-testing
+version: 1
+name: python3
+# TODO
+modulemd-url:
+packages:
+    rpms:
+        - python3
+        - python3-test
+module:
+    docker:
+        labels:
+            # TODO Test contained in modulelint.py:DockerLint.testLabels checks
+            # if the container has these exact labels
+            description: "Python 3 is a modern interpreted programming language"
+            io.k8s.description: "Python 3 is a modern interpreted programming language"
+        source:
+        # TODO Temporary until a real Python-module container is built
+        container: docker.io/fedora:25
+    rpm:
+        repos:
+            # TODO Temporary until a real Python module is built
+            - http://mirror.vutbr.cz/fedora/releases/25/Everything/x86_64/os/
